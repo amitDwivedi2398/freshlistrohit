@@ -7,23 +7,23 @@ import axios from "axios";
 import swal from "sweetalert";
 
 function UserRegister() {
-  const [mobile, setMobile] = useState("9898090674");
+  // const [mobile, setMobile] = useState("9898090674");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log("click button");
-    {
-      axios
-        .post(`http://3.6.37.16:8000/user/websignup`, {
-          mobile,
-        })
-        .then((response) => {
-          console.log(response.data);
-        }).catch((err)=>{
-            console.log("errr",err)
-        })
-    }
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log("click button");
+  //   {
+  //     axios
+  //       .post(`http://3.6.37.16:8000/user/websignup`, {
+  //         mobile,
+  //       })
+  //       .then((response) => {
+  //         console.log(response.data);
+  //       }).catch((err)=>{
+  //           console.log("errr",err)
+  //       })
+  //   }
+  // };
 
   return (
     <>
@@ -46,13 +46,13 @@ function UserRegister() {
                           </p>
                         </div>
                         <br></br>
-                        <form onSubmit={handleSubmit}>
+                        <form>
                           <div className="form-group">
                             <input
                               type="text"
                               placeholder="email"
-                              value={mobile}
-                              onChange={(e) => setMobile(e.target.value)}
+                              // value={mobile}
+                              // onChange={(e) => setMobile(e.target.value)}
                               required
                             />
                           </div>
@@ -65,7 +65,6 @@ function UserRegister() {
                                   type="checkbox"
                                   name="checkbox"
                                   id="exampleCheckbox12"
-                                  value=""
                                 />
                                 <label
                                   className="form-check-label"
